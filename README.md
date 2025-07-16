@@ -58,3 +58,35 @@ This project serves as a practical application of data science principles in the
 
    * By Establishing a foundational dataset and insights that could be extended into customer lifetime value prediction or churn modeling in future phases.
 
+
+### Data Source
+
+**The Company's central transaction database**
+
+
+### Project Methodology
+
+- **Data Collection**: Data was collected from the Company's Central Transaction Database
+
+- **Data Pre-processing**: Loaded the data from a CSV file into a Pandas Dataframe
+
+- **Data Inspection and Cleaning**: Checked for Missing values, Checked for Duplicates.
+
+- - Handled missing values
+  - Handled duplicate values
+
+- **Data Modification**: generated some  core metrics which were NOT provided from the dataset, and would be required for the purpose of the data   analysis
+
+- **Data Aggregation**: To Compute the major metric : Total Revenue by Customer**
+
+- **Data Sorting/ Data Ranking**: To Determine the Most Importat Metric:  **Top 10 highest revenue-generating customers**
+
+- **Data Visualization**: To uncover the **Top 10 highest revenue-generating customers** in a pictorial form.
+
+- **Data Interpretation**:
+
+- **Key Findings**
+
+- **Conclusions**
+
+- **Reconmendation**

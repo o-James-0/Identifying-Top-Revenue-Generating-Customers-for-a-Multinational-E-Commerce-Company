@@ -138,6 +138,9 @@ bikes_df
 ~~~
 
 
+<img width="1108" height="467" alt="data pre processing" src="https://github.com/user-attachments/assets/056d1874-7654-41d6-ade4-82d9824a74b7" />
+
+
 ### Data Inspection and Cleaning
 
 - **1. Check for Missing values**:

@@ -90,3 +90,134 @@ This project serves as a practical application of data science principles in the
 - **Conclusions**
 
 - **Reconmendation**
+
+
+
+### Data Collection
+
+Sales data was obtained from a central transaction database of the company representing orders placed by customers across multiple countries. Each record included attributes such as:
+
+* `Customer ID`
+* `OrderNo`
+* `OrderQuantity`
+* `CostPrice_usd`
+* `SellingPrice_usd`
+* `OrderDate`
+* `CustomerName`
+* `CustomerCity`
+* `CustomerState`
+* `CustomerCountry`
+* `ProductCategory`
+* `ProductColor`
+* `Model`
+
+
+### Data Pre-processing
+
+**Data Loading**: 
+Reading the Raw Dataset which originally existed as a CSV file into a Pandas Dataframe
+
+
+
+__Task:__ Follow the appropriate steps in reading a CSV file into a pandas Dataframe, 
+
+
+and  Read the data stored  in the csv file named:  `bikes` From your computer.
+
+
+The resulting Dataframe should be named : `bikes_df`
+
+
+~~~python
+# solution
+# solution 
+import pandas as pd
+
+bikes_df = pd.read_csv("C:/Users/James/Downloads/bikes.csv")
+bikes_df
+~~~
+
+
+### Data Inspection and Cleaning
+
+- **1. Check for Missing values**:
+
+~~~python
+# solution 
+bikes_df.isna().any()
+
+~~~
+
+
+~~~python
+# counting the number of missing values
+Number_of_missing_values_per_column = bikes_df.isna().sum()
+Number_of_missing_values_per_column
+~~~
+
+
+~~~python
+# counting the number of rows
+
+len(bikes_df)
+~~~
+
+
+~~~python
+  # visualising the total number of the missing values
+
+import matplotlib.pyplot as plt
+
+Number_of_missing_values_per_column.plot(kind = "bar")
+plt.plot()
+~~~
+
+
+- **2.Handling Missing values**:
+
+~~~python
+  # solution 
+bikes_df_filled = bikes_df.fillna("Black")
+
+bikes_df_filled
+~~~
+
+
+
+###  Check if any  columns is still containing  missing values from the:  bikes_df_filled
+
+~~~python
+# solution 
+
+bikes_df_filled.isna().any()
+~~~
+
+
+- **3. Check for  Duplicates**:
+
+~~~python
+  # solution
+
+# counting the total number of our datapoint
+len(bikes_df)
+~~~
+
+
+
+- **4. Handling Duplicates**:
+
+~~~python
+  # solution
+# dropping any duplicate if any exists
+
+bikes_df.drop_duplicates(inplace = True)
+~~~
+
+
+~~~python
+# recounting our data point again
+
+len(bikes_df)
+
+# this shows there was no duplicate in our data point
+~~~

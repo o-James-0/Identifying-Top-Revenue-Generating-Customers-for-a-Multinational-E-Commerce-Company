@@ -23,3 +23,38 @@ This project serves as a practical application of data science principles in the
 
 ### Project Objectives 
 
+1. **To Identify Top Revenue-Generating Customers**
+
+   * By Analyzing sales data to determine the top 10 customers contributing the highest total revenue across all regions.
+
+
+2. **To Understand Revenue Concentration**
+
+   * By Analyzing how much of the company's total revenue is concentrated among top customers.
+
+
+3. **To Uncover Geographic Patterns**
+
+   * By Assessing the global distribution of high-value customers across the Countries to identify key markets and regional revenue   clusters.
+
+
+4. **To Support Strategic Decision-Making**
+
+   * By Providing actionable insights to the company’s sales and marketing teams for developing targeted retention, loyalty, and upselling strategies.
+
+
+
+5. **To Demonstrate Real-World Data Science Application**
+
+   * By Showcasing the use of data science tools and techniques (data preprocessing, aggregation, visualization) in solving a real-world business problem.
+
+
+6. **To Enable Stakeholder Communication**
+
+   * By Creating intuitive visualizations and summaries that allow non-technical stakeholders to understand key findings and insights.
+
+
+7. **To Lay the Groundwork for Predictive Modeling**
+
+   * By Establishing a foundational dataset and insights that could be extended into customer lifetime value prediction or churn modeling in future phases.
+

@@ -224,3 +224,70 @@ len(bikes_df)
 
 # this shows there was no duplicate in our data point
 ~~~
+
+
+
+### Data Modification
+
+
+~~~python
+# generating some core metrics which were NOT provided from the dataset, which would be required for the purpose of the data analysis
+
+# solution 
+
+# (1) TotalCostPrice : To be obtained by (OrderQuantity x CostPrice_usd)
+
+
+bikes_df["TotalCostPrice"] = bikes_df["OrderQuantity"] * bikes_df["CostPrice_usd"] 
+
+
+# (2) SalesRevenue : To be obtained by (OrderQuantity x SellingPrice_usd)
+
+
+bikes_df["SalesRevenue"] = bikes_df["OrderQuantity"] * bikes_df["SellingPrice_usd"] 
+
+
+# (3) Profit : To be obtained by (SalesRevenue - TotalCostPrice)
+
+
+bikes_df["Profit"] = bikes_df["SalesRevenue"]  - bikes_df["TotalCostPrice"]
+
+
+# Displaying the result
+
+bikes_df.head()
+~~~
+
+
+
+### Data Aggregation
+
+
+~~~python
+# Computing/ Aggregating the sales data to show Total Revenue by Customer , including their City, State and Country. 
+
+# solution 
+"CustomerName", "CustomerCity", "CustomerState", "CustomerCountry"	
+
+bikes_df.groupby(["CustomerName", "CustomerCity", "CustomerState", "CustomerCountry"])["SalesRevenue"].sum()
+~~~
+
+
+~~~python
+# adding their index number
+
+Total_revenue_by_customer = bikes_df.groupby(["CustomerName", "CustomerCity", "CustomerState", "CustomerCountry"])["SalesRevenue"].sum().reset_index()
+Total_revenue_by_customer
+~~~
+
+
+
+### Data Sorting/ Data Ranking
+
+~~~python
+# To Determine the Most Importat Metric: Top 10 highest revenue-generating customers 
+
+# solution 
+
+The_Top_10_customers = Total_revenue_by_customer.sort_values("SalesRevenue", ascending = False).head(10)
+The_Top_10_customers

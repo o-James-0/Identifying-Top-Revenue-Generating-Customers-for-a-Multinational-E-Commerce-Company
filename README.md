@@ -152,6 +152,9 @@ bikes_df.isna().any()
 ~~~
 
 
+<img width="302" height="372" alt="checking for missing values" src="https://github.com/user-attachments/assets/d1f30f3f-b07b-45e9-b27c-986999df6184" />
+
+
 ~~~python
 # counting the number of missing values
 Number_of_missing_values_per_column = bikes_df.isna().sum()
@@ -159,11 +162,17 @@ Number_of_missing_values_per_column
 ~~~
 
 
+<img width="437" height="295" alt="counting the number of missing values" src="https://github.com/user-attachments/assets/cff78404-6f65-473f-97e1-56e92da28fd5" />
+
+
+
 ~~~python
 # counting the number of rows
 
 len(bikes_df)
 ~~~
+
+<img width="251" height="88" alt="counting the number of rows" src="https://github.com/user-attachments/assets/fbf15330-84c1-43f8-8ae8-65090d559163" />
 
 
 ~~~python
@@ -176,6 +185,9 @@ plt.plot()
 ~~~
 
 
+<img width="623" height="502" alt="data visualisation" src="https://github.com/user-attachments/assets/45a7092e-db87-4dda-9ea9-90ab5b318ef5" />
+
+
 - **2.Handling Missing values**:
 
 ~~~python
@@ -184,6 +196,9 @@ bikes_df_filled = bikes_df.fillna("Black")
 
 bikes_df_filled
 ~~~
+
+
+<img width="1109" height="502" alt="handling missing values" src="https://github.com/user-attachments/assets/4041ddb5-3ebe-4b68-8340-25e8aa379aa7" />
 
 
 
@@ -196,6 +211,9 @@ bikes_df_filled.isna().any()
 ~~~
 
 
+<img width="254" height="229" alt="checking if a column still contains missing values" src="https://github.com/user-attachments/assets/ffd20848-df1b-4c02-a541-652bdd63565f" />
+
+
 - **3. Check for  Duplicates**:
 
 ~~~python
@@ -204,6 +222,9 @@ bikes_df_filled.isna().any()
 # counting the total number of our datapoint
 len(bikes_df)
 ~~~
+
+
+<img width="365" height="172" alt="checking for duplicate" src="https://github.com/user-attachments/assets/98236622-ac37-4245-a4a7-9e684696f8bb" />
 
 
 
@@ -224,6 +245,9 @@ len(bikes_df)
 
 # this shows there was no duplicate in our data point
 ~~~
+
+
+<img width="424" height="347" alt="handling duplicate" src="https://github.com/user-attachments/assets/f70f39fd-78dc-40c5-b3ba-76cfedbeb6c0" />
 
 
 
@@ -258,6 +282,9 @@ bikes_df["Profit"] = bikes_df["SalesRevenue"]  - bikes_df["TotalCostPrice"]
 bikes_df.head()
 ~~~
 
+<img width="1152" height="322" alt="Data modification" src="https://github.com/user-attachments/assets/891ec08b-84ba-4534-ae60-cb58f8d5202c" />
+
+
 
 
 ### Data Aggregation
@@ -273,12 +300,18 @@ bikes_df.groupby(["CustomerName", "CustomerCity", "CustomerState", "CustomerCoun
 ~~~
 
 
+<img width="599" height="237" alt="data agg" src="https://github.com/user-attachments/assets/b19fe288-3548-400c-af71-93c8a525415d" />
+
+
 ~~~python
 # adding their index number
 
 Total_revenue_by_customer = bikes_df.groupby(["CustomerName", "CustomerCity", "CustomerState", "CustomerCountry"])["SalesRevenue"].sum().reset_index()
 Total_revenue_by_customer
 ~~~
+
+
+<img width="633" height="395" alt="indexing data agg" src="https://github.com/user-attachments/assets/5bdfed09-ad40-4496-9068-33c092215766" />
 
 
 
@@ -292,6 +325,9 @@ Total_revenue_by_customer
 The_Top_10_customers = Total_revenue_by_customer.sort_values("SalesRevenue", ascending = False).head(10)
 The_Top_10_customers
 ~~~
+
+
+<img width="694" height="339" alt="data sorting" src="https://github.com/user-attachments/assets/ae3bcc5b-a800-41cb-8c7a-7ba4b3469ad3" />
 
 
 
@@ -328,6 +364,9 @@ Ratio
 ~~~
 
 
+<img width="927" height="469" alt="comparison of the total revenue and top ten customer" src="https://github.com/user-attachments/assets/abd406a0-4417-4aae-a268-f25ee2998a70" />
+
+
 
 ### Data Visualization
 
@@ -348,6 +387,9 @@ plt.title("The Top 10 customers by TotalRevenue since the company started")
 # to show the plot
 plt.show()
 ~~~
+
+
+<img width="558" height="511" alt="top ten customer visualization" src="https://github.com/user-attachments/assets/dbd6f095-fb13-4786-9868-0d719d474d71" />
 
 
 

@@ -394,7 +394,7 @@ The Result from the data visualisation above shows that all the **Top 10 custome
 
 ### Conclusions
 
-
+---
 The company's sales data analysis reveals that the company operates a **high-volume, low-concentration revenue model**, where no single customer or small group significantly influences total revenue. 
 
 This suggests a **wide customer base**, possibly driven by individual, one-time, or small-ticket purchases.
@@ -415,7 +415,7 @@ However, the **absence of high-revenue customers** from other regions such as th
 ### Reconmendation
 
 
-
+---
 ### 1. **Expand High-Value Customer Acquisition Beyond France**
 
 * Launch targeted marketing campaigns in **United States, Canada, Germany, UK, and Australia** to balance regional revenue dependency.
